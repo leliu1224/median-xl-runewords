@@ -1,0 +1,691 @@
+[
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrEl.jpg",
+    "name": "El",
+    "level": "6",
+    "label": "",
+    "stats": [
+      "+3 to all Attributes",
+      "+3 to all Attributes",
+      "+3 to all Attributes"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrEld.jpg",
+    "name": "Eld",
+    "level": "8",
+    "label": "",
+    "stats": [
+      "+5 to Maximum Damage",
+      "+3 to Maximum Damage",
+      "+3 to Maximum Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrTir.jpg",
+    "name": "Tir",
+    "level": "10",
+    "label": "",
+    "stats": [
+      "+3% to Fire Spell Damage",
+      "+3% to Fire Spell Damage",
+      "+3% to Fire Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrNef.jpg",
+    "name": "Nef",
+    "level": "13",
+    "label": "",
+    "stats": [
+      "+3% to Lightning Spell Damage",
+      "+3% to Lightning Spell Damage",
+      "+3% to Lightning Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrEth.jpg",
+    "name": "Eth",
+    "level": "15",
+    "label": "",
+    "stats": [
+      "+3% to Cold Spell Damage",
+      "+3% to Cold Spell Damage",
+      "+3% to Cold Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrIth.jpg",
+    "name": "Ith",
+    "level": "18",
+    "label": "",
+    "stats": [
+      "+3% to Poison Spell Damage",
+      "+3% to Poison Spell Damage",
+      "+3% to Poison Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrTal.jpg",
+    "name": "Tal",
+    "level": "20",
+    "label": "",
+    "stats": [
+      "+3% to Physical/Magic Spell Damage",
+      "+3% to Physical/Magic Spell Damage",
+      "+3% to Physical/Magic Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrRal.jpg",
+    "name": "Ral",
+    "level": "23",
+    "label": "",
+    "stats": ["Fire Resist +30%", "Fire Resist +25%", "Fire Resist +25%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrOrt.jpg",
+    "name": "Ort",
+    "level": "25",
+    "label": "",
+    "stats": [
+      "Lightning Resist +30%",
+      "Lightning Resist +25%",
+      "Lightning Resist +25%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrThul.jpg",
+    "name": "Thul",
+    "level": "28",
+    "label": "",
+    "stats": ["Cold Resist +30%", "Cold Resist +25%", "Cold Resist +25%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrAmn.jpg",
+    "name": "Amn",
+    "level": "30",
+    "label": "",
+    "stats": ["Poison Resist +30%", "Poison Resist +25%", "Poison Resist +25%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrSol.jpg",
+    "name": "Sol",
+    "level": "33",
+    "label": "",
+    "stats": ["+60 to Mana", "+40 to Mana", "+40 to Mana"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrShae.jpg",
+    "name": "Shael",
+    "level": "35",
+    "label": "",
+    "stats": [
+      "+15% Bonus to Poison Skill Duration",
+      "+10% Bonus to Poison Skill Duration",
+      "+10% Bonus to Poison Skill Duration"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrDol.jpg",
+    "name": "Dol",
+    "level": "38",
+    "label": "",
+    "stats": [
+      "+10% to Summoned Minion Life",
+      "+10% to Summoned Minion Life",
+      "+10% to Summoned Minion Life"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrHel.jpg",
+    "name": "Hel",
+    "level": "40",
+    "label": "",
+    "stats": [
+      "+5% to Summoned Minion Damage",
+      "+5% to Summoned Minion Damage",
+      "+5% to Summoned Minion Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrIo.jpg",
+    "name": "Io",
+    "level": "43",
+    "label": "",
+    "stats": [
+      "+50% to Summoned Minion Attack Rating",
+      "+50% to Summoned Minion Attack Rating",
+      "+50% to Summoned Minion Attack Rating"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrLum.jpg",
+    "name": "Lum",
+    "level": "45",
+    "label": "",
+    "stats": [
+      "+5% to Summoned Minion Resistances",
+      "+5% to Summoned Minion Resistances",
+      "+5% to Summoned Minion Resistances"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrKo.jpg",
+    "name": "Ko",
+    "level": "48",
+    "label": "",
+    "stats": ["5% to Strength", "5% to Strength", "5% to Strength"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrFal.jpg",
+    "name": "Fal",
+    "level": "50",
+    "label": "",
+    "stats": ["5% to Dexterity", "5% to Dexterity", "5% to Dexterity"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrLem.jpg",
+    "name": "Lem",
+    "level": "53",
+    "label": "",
+    "stats": ["4% to Vitality", "4% to Vitality", "4% to Vitality"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrPul.jpg",
+    "name": "Pul",
+    "level": "55",
+    "label": "",
+    "stats": ["5% to Energy", "5% to Energy", "5% to Energy"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrUm.jpg",
+    "name": "Um",
+    "level": "58",
+    "label": "",
+    "stats": [
+      "Elemental Resists +10%",
+      "Elemental Resists +10%",
+      "Elemental Resists +10%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrMal.jpg",
+    "name": "Mal",
+    "level": "60",
+    "label": "",
+    "stats": [
+      "3% to All Attributes",
+      "3% to All Attributes",
+      "3% to All Attributes"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrIst.jpg",
+    "name": "Ist",
+    "level": "63",
+    "label": "",
+    "stats": ["10% Magic Find", "7% Magic Find", "7% Magic Find"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrGul.jpg",
+    "name": "Gul",
+    "level": "65",
+    "label": "",
+    "stats": ["15% Attack Speed", "15% Attack Speed", "15% Attack Speed"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrVex.jpg",
+    "name": "Vex",
+    "level": "68",
+    "label": "",
+    "stats": ["15% Cast Speed", "15% Cast Speed", "15% Cast Speed"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrOhm.jpg",
+    "name": "Ohm",
+    "level": "70",
+    "label": "",
+    "stats": ["15% Hit Recovery", "15% Hit Recovery", "15% Hit Recovery"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrLo.jpg",
+    "name": "Lo",
+    "level": "73",
+    "label": "",
+    "stats": ["15% Block Speed", "15% Block Speed", "15% Block Speed"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrSur.jpg",
+    "name": "Sur",
+    "level": "75",
+    "label": "",
+    "stats": [
+      "Regenerate Mana +15%",
+      "Regenerate Mana +5%",
+      "Regenerate Mana +5%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrBer.jpg",
+    "name": "Ber",
+    "level": "78",
+    "label": "",
+    "stats": ["Slow Target 3%", "Slows Attacker by 2%", "Slows Attacker by 2%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrJo.jpg",
+    "name": "Jah",
+    "level": "80",
+    "label": "",
+    "stats": [
+      "+15% Enhanced Damage",
+      "+15% Enhanced Defense",
+      "+15% Enhanced Defense"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrCham.jpg",
+    "name": "Cham",
+    "level": "83",
+    "label": "",
+    "stats": ["Maximum Mana +3%", "Maximum Mana +2%", "Maximum Mana +2%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/invrZod.jpg",
+    "name": "Zod",
+    "level": "85",
+    "label": "",
+    "stats": ["Indestructible", "Indestructible", "Indestructible"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisEl.jpg",
+    "name": "Ol",
+    "level": "90",
+    "label": "",
+    "stats": [
+      "+10 to all Attributes",
+      "+10 to all Attributes",
+      "+10 to all Attributes"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisEld.jpg",
+    "name": "Elq",
+    "level": "90",
+    "label": "",
+    "stats": [
+      "+20 to Maximum Damage",
+      "+10 to Maximum Damage",
+      "+10 to Maximum Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisTir.jpg",
+    "name": "Tyr",
+    "level": "90",
+    "label": "",
+    "stats": [
+      "+4% to Fire Spell Damage",
+      "+4% to Fire Spell Damage",
+      "+4% to Fire Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisNef.jpg",
+    "name": "Nif",
+    "level": "95",
+    "label": "",
+    "stats": [
+      "+4% to Lightning Spell Damage",
+      "+4% to Lightning Spell Damage",
+      "+4% to Lightning Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisEth.jpg",
+    "name": "Xeth",
+    "level": "95",
+    "label": "",
+    "stats": [
+      "+4% to Cold Spell Damage",
+      "+4% to Cold Spell Damage",
+      "+4% to Cold Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisIth.jpg",
+    "name": "Xith",
+    "level": "95",
+    "label": "",
+    "stats": [
+      "+4% to Poison Spell Damage",
+      "+4% to Poison Spell Damage",
+      "+4% to Poison Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisTal.jpg",
+    "name": "Thal",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "+4% to Physical/Magic Spell Damage",
+      "+4% to Physical/Magic Spell Damage",
+      "+4% to Physical/Magic Spell Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisRal.jpg",
+    "name": "Rhal",
+    "level": "100",
+    "label": "",
+    "stats": ["Fire Resist +40%", "Fire Resist +30%", "Fire Resist +30%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisOrt.jpg",
+    "name": "Urt",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "Lightning Resist +40%",
+      "Lightning Resist +30%",
+      "Lightning Resist +30%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisThul.jpg",
+    "name": "Tuul",
+    "level": "100",
+    "label": "",
+    "stats": ["Cold Resist +40%", "Cold Resist +30%", "Cold Resist +30%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisAmn.jpg",
+    "name": "Ahmn",
+    "level": "100",
+    "label": "",
+    "stats": ["Poison Resist +40%", "Poison Resist +30%", "Poison Resist +30%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisSol.jpg",
+    "name": "Zol",
+    "level": "100",
+    "label": "",
+    "stats": ["+80 to Mana", "+60 to Mana", "+60 to Mana"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisShael.jpg",
+    "name": "Shaen",
+    "level": "105",
+    "label": "",
+    "stats": [
+      "+20% Bonus to Poison Skill Duration",
+      "+13% Bonus to Poison Skill Duration",
+      "+13% Bonus to Poison Skill Duration"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisDol.jpg",
+    "name": "Doj",
+    "level": "105",
+    "label": "",
+    "stats": [
+      "+13% to Summoned Minion Life",
+      "+13% to Summoned Minion Life",
+      "+13% to Summoned Minion Life"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisHel.jpg",
+    "name": "Hem",
+    "level": "105",
+    "label": "",
+    "stats": [
+      "+7% to Summoned Minion Damage",
+      "+7% to Summoned Minion Damage",
+      "+7% to Summoned Minion Damage"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisIo.jpg",
+    "name": "Iu",
+    "level": "105",
+    "label": "",
+    "stats": [
+      "+70% to Summoned Minion Attack Rating",
+      "+70% to Summoned Minion Attack Rating",
+      "+70% to Summoned Minion Attack Rating"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisLum.jpg",
+    "name": "Lux",
+    "level": "105",
+    "label": "",
+    "stats": [
+      "+7% to Summoned Minion Resistances",
+      "+7% to Summoned Minion Resistances",
+      "+7% to Summoned Minion Resistances"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisKo.jpg",
+    "name": "Ka",
+    "level": "105",
+    "label": "",
+    "stats": ["7% to Strength", "7% to Strength", "7% to Strength"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisFal.jpg",
+    "name": "Fel",
+    "level": "110",
+    "label": "",
+    "stats": ["7% to Dexterity", "7% to Dexterity", "7% to Dexterity"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisLem.jpg",
+    "name": "Lew",
+    "level": "110",
+    "label": "",
+    "stats": ["6% to Vitality", "6% to Vitality", "6% to Vitality"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisPul.jpg",
+    "name": "Phul",
+    "level": "110",
+    "label": "",
+    "stats": ["7% to Energy", "7% to Energy", "7% to Energy"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisUm.jpg",
+    "name": "Un",
+    "level": "110",
+    "label": "",
+    "stats": [
+      "Elemental Resists +13%",
+      "Elemental Resists +13%",
+      "Elemental Resists +13%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisMal.jpg",
+    "name": "Mhal",
+    "level": "110",
+    "label": "",
+    "stats": [
+      "4% to All Attributes",
+      "4% to All Attributes",
+      "4% to All Attributes"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisIst.jpg",
+    "name": "Yst",
+    "level": "110",
+    "label": "",
+    "stats": ["13% Magic Find", "10% Magic Find", "10% Magic Find"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisGul.jpg",
+    "name": "Gur",
+    "level": "115",
+    "label": "",
+    "stats": ["20% Attack Speed", "20% Attack Speed", "20% Attack Speed"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisVex.jpg",
+    "name": "Vez",
+    "level": "115",
+    "label": "",
+    "stats": ["20% Cast Speed", "20% Cast Speed", "20% Cast Speed"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisOhm.jpg",
+    "name": "Ohn",
+    "level": "115",
+    "label": "",
+    "stats": ["20% Hit Recovery", "20% Hit Recovery", "20% Hit Recovery"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisLo.jpg",
+    "name": "Loz",
+    "level": "115",
+    "label": "",
+    "stats": ["20% Block Speed", "20% Block Speed", "20% Block Speed"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisSur.jpg",
+    "name": "Zur",
+    "level": "115",
+    "label": "",
+    "stats": [
+      "Regenerate Mana +20%",
+      "Regenerate Mana +7%",
+      "Regenerate Mana +7%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisBer.jpg",
+    "name": "Bur",
+    "level": "115",
+    "label": "",
+    "stats": ["Slow Target 4%", "Slows Attacker by 3%", "Slows Attacker by 3%"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisJah.jpg",
+    "name": "Iah",
+    "level": "120",
+    "label": "",
+    "stats": [
+      "+20% Enhanced Damage",
+      "+20% Enhanced Defense",
+      "+20% Enhanced Defense"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisCham.jpg",
+    "name": "Yham",
+    "level": "120",
+    "label": "",
+    "stats": [
+      "Maximum Life and Mana +2%",
+      "Maximum Life and Mana +1%",
+      "Maximum Life and Mana +1%"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/xisZod.jpg",
+    "name": "Xod",
+    "level": "120",
+    "label": "",
+    "stats": ["Indestructible", "Indestructible", "Indestructible"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/r-d-02.jpg",
+    "name": "Taha",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "-2% to Enemy Elemental Resistances",
+      "-2% to Enemy Elemental Resistances",
+      "-2% to Enemy Elemental Resistances"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/r-d-05.jpg",
+    "name": "Ghal",
+    "level": "100",
+    "label": "",
+    "stats": ["+25 Spell Focus", "+15 Spell Focus", "+15 Spell Focus"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/r-d-11.jpg",
+    "name": "Qor",
+    "level": "100",
+    "label": "",
+    "stats": ["3% Deadly Strike", "2% Deadly Strike", "2% Deadly Strike"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/fire-rune.jpg",
+    "name": "Fire",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "-3% to Enemy Fire Resistance",
+      "-3% to Enemy Fire Resistance",
+      "-3% to Enemy Fire Resistance"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/phys-rune.jpg",
+    "name": "Stone",
+    "level": "100",
+    "label": "",
+    "stats": ["Adds 5-10 Damage", "Adds 3-5 Damage", "Adds 3-5 Damage"]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/magic-rune.jpg",
+    "name": "Arcane",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "+3% Bonus to Spell Focus",
+      "+2% Bonus to Spell Focus",
+      "+2% Bonus to Spell Focus"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/pois-rune.jpg",
+    "name": "Poison",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "-3% to Enemy Poison Resistance",
+      "-3% to Enemy Poison Resistance",
+      "-3% to Enemy Poison Resistance"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/ltng-rune.jpg",
+    "name": "Light",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "-3% to Enemy Lightning Resistance",
+      "-3% to Enemy Lightning Resistance",
+      "-3% to Enemy Lightning Resistance"
+    ]
+  },
+  {
+    "image": "https://docs.median-xl.com/images/runes/cold-rune.jpg",
+    "name": "Ice",
+    "level": "100",
+    "label": "",
+    "stats": [
+      "-3% to Enemy Cold Resistance",
+      "-3% to Enemy Cold Resistance",
+      "-3% to Enemy Cold Resistance"
+    ]
+  }
+]
