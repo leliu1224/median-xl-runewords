@@ -12,8 +12,14 @@ body {
   color: #eee;
 }
 
+header {
+  background-color: #6a6968;
+  color: #eee;
+}
+
 .content-wrapper {
-  max-width: 1024px;
+  max-width: 1280px;
+  padding: 1em;
   margin: auto;
 }
 
@@ -35,7 +41,7 @@ form.search-form {
 }
 
 .rune-container label {
-  min-width: 75px;
+  min-width: 80px;
   text-align: center;
 }
 
@@ -85,7 +91,9 @@ form.search-form {
 }
 
 div[class^="runeword-container"] {
-  width: 33%;
+  width: 31%;
+  margin: 1%;
+  border: 1px solid #908858;
 }
 
 ul {
@@ -98,9 +106,9 @@ li {
 
 input.search-field {
   display: inline-block;
-  width: 80%;
+  width: 88%;
   padding: 0.375rem 0.75rem;
-  margin-right: 10px;
+  margin-right: 1%;
   font-size: 1rem;
   line-height: 1.5;
   color: #495057;
@@ -126,6 +134,7 @@ button.btn-search {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
+  width: 10%;
 }
 
 input[type="checkbox"][id^="rune"] {
@@ -190,3 +199,20 @@ label img {
   box-shadow: 0 0 5px #333;
   z-index: -1;
 } */
+
+@media screen and (max-width: 780px) {
+  input.search-field {
+    width: 65%;
+  }
+  button.btn-search {
+    width: 30%;
+  }
+
+  .runewords-wrapper {
+    flex-direction: column;
+  }
+
+  div[class^="runeword-container"] {
+    width: 100%;
+  }
+}

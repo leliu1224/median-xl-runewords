@@ -66,12 +66,12 @@ const IndexPage = props => {
     let tempRunewords = runewords
 
     // if (updatedSearchArray.length > 0) {
-    const filteredData = tempRunewords.filter(runeword => {
+    let filteredData = tempRunewords.filter(runeword => {
       const requiredRunewords = runeword.node.runes
       // console.log(requiredRunewords)
       return updatedSearchArray.some(v => requiredRunewords.indexOf(v) >= 0)
     })
-
+    filteredData = filteredData.length > 0 ? filteredData : runewords
     setSearchRunewords(filteredData)
     // } else {
     //   setSearchRunewords(runewords)
