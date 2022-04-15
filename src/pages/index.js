@@ -201,6 +201,8 @@ const IndexPage = props => {
       <Seo title="Home" />
 
       {/* RUNEWORD CHECKBOXES */}
+      <h1 className="text-center section-header">Runes</h1>
+      <p className="text-center section-subheader">(select the ones you own)</p>
       <div className="runes-wrapper">
         {runes.map((rune, index) => {
           return (
@@ -227,6 +229,7 @@ const IndexPage = props => {
         })}
       </div>
 
+      <h1 className="text-center  section-header">Possible Runewords</h1>
       {/* SEARCH FIELD */}
       <div className="form-wrapper">
         <form className="search-form" onSubmit={handleSearch}>
@@ -246,7 +249,7 @@ const IndexPage = props => {
             Search
           </button>
         </form>
-        <div class="complete-runeword-container">
+        <div className="complete-runeword-container">
           <input
             type="checkbox"
             name="complete-runeword"
@@ -254,7 +257,7 @@ const IndexPage = props => {
             checked={needCompleteRunewords}
             onChange={() => handleRunewordCheckbox()}
           />
-          <label for="complete-runeword">Completed Runewords Only</label>
+          <label htmlFor="complete-runeword">Completed Runewords Only</label>
         </div>
       </div>
 
