@@ -22,149 +22,87 @@ const IndexPage = props => {
   const runesCheckedArray = runes.map(function (node) {
     return [node.node.name, false]
   })
-
-  let [searchValue, setSearchValue] = useState("")
   // What runeword are checked
   let [runeChecked, setRuneChecked] = useState(runesCheckedArray)
-  // Array or runes to search for
-  let [searchArray, setSearchArray] = useState([])
+  // search inputs
+  let [searchValue, setSearchValue] = useState("")
+  // number of runes searching
+  let [searchRuneCount, setSearchRuneCount] = useState(0)
   // Runewords from checked runes
   let [checkedRunewords, setCheckedRunewords] = useState(runewords)
-  // Runewords to display
+  // Runewords to display - can be different from checkedRunewords due to searches
   let [displayRunewords, setDisplayRunewords] = useState(runewords)
-  //
+  // State for the completed runeword checkbox
   let [needCompleteRunewords, setNeedCompleteRunewords] = useState(false)
 
   const handleCheckbox = (position, rune) => {
-    // get full rune array with condition set to true for checked runes
+    // set the checked state to the opposite for the runes
     runeChecked[position][1] = !runeChecked[position][1]
-    // let updatedRuneChecked = runeChecked.map((runeItem, index) =>
-    //   index === position
-    //     ? [runeItem[0], !runeItem[1]]
-    //     : [runeItem[0], runeItem[1]]
-    // )
-    // setRuneChecked(updatedRuneChecked)
     setRuneChecked(runeChecked)
-
-    // Remove the item if the state is false
-    // Check if the index
-
-    // Create an array for the runes being searched
-    let updatedSearchArray = searchArray
 
     // Check if the rune is checked
     if (runeChecked[position][1]) {
+      setSearchRuneCount(searchRuneCount + 1)
       // Push the rune to the array for search
-      updatedSearchArray.push(rune)
-
-      // updatedSearchArray = updatedSearchArray.filter(function (item, pos) {
-      //   var test = item
-      //   var test2 = updatedSearchArray.indexOf(item)
-      //   return updatedSearchArray.indexOf(item) == pos
-      // })
-      // console.log(updatedSearchArray)
-      // Clean up the array to unique values
-      // Set the search array state
-      setSearchArray(updatedSearchArray)
     } else {
-      // Remove the rune from the search array
-      updatedSearchArray.splice(updatedSearchArray.indexOf(rune), 1)
-      // console.log(updatedSearchArray)
-      setSearchArray(updatedSearchArray)
-      if (updatedSearchArray.length == 0) {
+      setSearchRuneCount(searchRuneCount - 1)
+      // Just keep a simple int state variable to see how many runes are being searched
+      if (searchRuneCount - 1 == 0) {
+        // if nothing is being checked, set the runewords to all runewords
         setCheckedRunewords(runewords)
         setDisplayRunewords(runewords)
+
+        // Handle search; also why is this not being done when the checked runes are not empty
         if (searchValue != "") {
-          filteredRunewords = runewords.filter(runeword => {
-            let { name, items, stats } = runeword.node
-            // console.log(name)
-            // console.log(items)
-            // console.log(stats)
-            return (
-              (name &&
-                name
-                  .join("")
-                  .toLowerCase()
-                  .includes(searchValue.toLowerCase())) ||
-              (items &&
-                items
-                  .join("")
-                  .toLowerCase()
-                  .includes(searchValue.toLowerCase())) ||
-              (stats &&
-                stats
-                  .join("")
-                  .toLowerCase()
-                  .includes(searchValue.toLowerCase()))
-            )
-          })
-          setDisplayRunewords(filteredRunewords)
+          searchInput(runewords)
         }
         return
       }
     }
 
-    // console.log(runeChecked[0])
-    // let tempRunewords = runewords
-    // let filteredRunewords =
-    //   searchRunewords.length > 0 ? searchRunewords : runewords
+    // go through runeChecked and run the filtering to see which rune are checked and create a separate array for that
+    let runeToSearch = runeChecked
+      .filter(rune => {
+        return rune[1] == true
+      })
+      .map(rune => {
+        return rune[0]
+      })
 
-    // if (updatedSearchArray.length > 0) {
-    // loop through all the runewords
+    // Run the filtering for the checked runes
     let filteredRunewords = runewords.filter(runeword => {
-      // get the required runes
+      // The required runes for the runeword
       const requiredRunes = runeword.node.runes
-      // console.log(requiredRunewords)
-      // check if the
-      // check to see if it at least requires some of the runes
+
+      // if the runeword needs to be complete
       if (needCompleteRunewords) {
-        return requiredRunes.every(rune => updatedSearchArray.includes(rune))
+        return requiredRunes.every(rune => runeToSearch.includes(rune))
       }
-      return updatedSearchArray.some(rune => requiredRunes.indexOf(rune) >= 0)
+      // check to see if it at least requires some of the runes
+      return runeToSearch.some(rune => requiredRunes.indexOf(rune) >= 0)
     })
 
-    // filteredRuneword =
-    //   filteredRuneword.length > 0 ? filteredRuneword : runewords
-
+    // set the runewords resulting from checked runes
     setCheckedRunewords(filteredRunewords)
+    // set the runewords to be displayed after applying search
     setDisplayRunewords(filteredRunewords)
 
     if (searchValue != "") {
-      filteredRunewords = filteredRunewords.filter(runeword => {
-        let { name, items, stats } = runeword.node
-        // console.log(name)
-        // console.log(items)
-        // console.log(stats)
-        return (
-          (name &&
-            name.join("").toLowerCase().includes(searchValue.toLowerCase())) ||
-          (items &&
-            items.join("").toLowerCase().includes(searchValue.toLowerCase())) ||
-          (stats &&
-            stats.join("").toLowerCase().includes(searchValue.toLowerCase()))
-        )
-      })
-      setDisplayRunewords(filteredRunewords)
+      searchInput(filteredRunewords)
     }
   }
 
   const handleInputChange = event => {
     setSearchValue(event.target.value)
+    // reset the display if there is nothing being searched
     if (event.target.value == "") {
       setDisplayRunewords(checkedRunewords)
     }
   }
 
-  const searchInput = () => {
-    // let query = searchValue
-    let filteredRunewords =
-      checkedRunewords.length > 0 ? checkedRunewords : runewords
-
-    filteredRunewords = filteredRunewords.filter(runeword => {
+  const searchInput = runewordsToSearch => {
+    let filteredRunewords = runewordsToSearch.filter(runeword => {
       let { name, items, stats } = runeword.node
-      // console.log(name)
-      // console.log(items)
-      // console.log(stats)
       return (
         (name &&
           name.join("").toLowerCase().includes(searchValue.toLowerCase())) ||
@@ -178,15 +116,15 @@ const IndexPage = props => {
   }
 
   const handleRunewordCheckbox = () => {
-    console.log(needCompleteRunewords)
+    // set the requirement for completed runewords
     setNeedCompleteRunewords(!needCompleteRunewords)
   }
 
   const handleSearch = event => {
-    searchInput()
+    let runewordsToSearch =
+      checkedRunewords.length > 0 ? checkedRunewords : runewords
+    searchInput(runewordsToSearch)
     event.preventDefault()
-    // let hasSearchResults = searchRunewords.length > 0 && searchValue !== ""
-    // let filteredRunewords = hasSearchResults ? searchRunewords : runewords
   }
 
   const getStats = (statList, type) => {

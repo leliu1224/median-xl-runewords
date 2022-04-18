@@ -1,5 +1,6 @@
 @font-face {
   font-family: "AvQest";
+
   src: url("AvQest.ttf") format("truetype");
 }
 
@@ -8,18 +9,18 @@
 }
 
 body {
-  background-color: #000;
-  color: #eee;
+  color: #eeeeee;
+  background-color: #000000;
 }
 
 header {
+  color: #eeeeee;
   background-color: #6a6968;
-  color: #eee;
- }
+}
 
 header div {
-  margin: 0 auto;
   max-width: 1280px;
+  margin: 0 auto;
   padding: 2em 1em;
 }
 
@@ -29,8 +30,8 @@ header div h1 {
 
 .content-wrapper {
   max-width: 1280px;
-  padding: 1em;
   margin: auto;
+  padding: 1em;
 }
 
 table td span {
@@ -50,7 +51,7 @@ form.search-form {
 }
 
 .complete-runeword-container label {
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .rune-container {
@@ -59,9 +60,9 @@ form.search-form {
 }
 
 .rune-image {
-  margin: auto;
-  height: 30px;
   width: 30px;
+  height: 30px;
+  margin: auto;
 }
 
 .runewords-wrapper {
@@ -75,9 +76,9 @@ form.search-form {
 }
 
 .runeword-container h1 {
+  font-family: AvQest;
   margin: 0;
   color: #908858;
-  font-family: AvQest;
 }
 
 .text-center {
@@ -94,9 +95,9 @@ form.search-form {
 }
 
 .runeword-container ul {
-  padding-left: 0;
-  margin-top: .5em;
+  margin-top: 0.5em;
   margin-bottom: 0;
+  padding-left: 0;
 } 
 
 .runeword-container li {
@@ -108,16 +109,16 @@ form.search-form {
 }
 
 .runeword-runes li {
+  font-family: AvQest;
+  font-weight: 600;
   display: inline-block;
   padding-right: 5px;
   color: #908858;
-  font-family: AvQest;
-  font-weight: 600;
 }
 
 .runeword-level p {
   margin-top: 0;
-  color: #ccc;
+  color: #cccccc;
 }
 
 .runeword-items {
@@ -144,34 +145,34 @@ li {
 }
 
 input.search-field {
+  font-size: 1rem;
+  line-height: 1.5;
   display: inline-block;
   width: 88%;
-  font-size: 1rem;
-  padding: 0.375rem 0.75rem;
   margin-right: 1%;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #495057;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  background-clip: padding-box;
 }
 
 button.btn-search {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.5;
+  display: inline-block;
   width: 10%;
+  padding: 0.375rem 0.75rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: 1px solid transparent;
 }
 
 input[type="checkbox"][id^="rune"] {
@@ -179,58 +180,59 @@ input[type="checkbox"][id^="rune"] {
 }
 
 .rune-container label {
-  min-width: 60px;
-  text-align: center;
-  border: 1px solid #888;
-  padding: 5px;
-  display: block;
-  position: relative;
-  margin: 3px;
-  color: #908858;
-  font-weight: 600;
   font-family: AvQest;
+  font-weight: 600;
+  position: relative;
+  display: block;
+  min-width: 60px;
+  margin: 3px;
+  padding: 5px;
   cursor: pointer;
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  color: #908858;
+  border: 1px solid #888888;
+
+  -webkit-touch-callout: none;
+   -khtml-user-select: none;
 }
 
 .rune-container label::before {
-  background-color: white;
-  color: white;
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  border: 1px solid grey;
+  line-height: 28px;
   position: absolute;
   top: -5px;
   left: -5px;
+  display: block;
   width: 25px;
   height: 25px;
-  text-align: center;
-  line-height: 28px;
+  content: " ";
   transition-duration: 0.4s;
   transform: scale(0);
+  text-align: center;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .rune-container label img {
-  height: 100px;
   width: 100px;
+  height: 100px;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;
 }
 
 .rune-container :checked + label {
-  border-color: #ddd;
+  border-color: #dddddd;
 }
 
 .rune-container :checked + label::before {
   content: "✓";
-  background-color: grey;
   transform: scale(1);
+  background-color: grey;
 }
 
 /* :checked + label img {
