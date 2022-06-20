@@ -132,7 +132,7 @@
     "name": ["Hive", "'BerBerIst'"],
     "level": "78",
     "image": "https://docs.median-xl.com/images/runes/invrBer.jpg",
-    "runes": ["2xBer", "Ist"],
+    "runes": ["Ber", "Ber", "Ist"],
     "items": ["Bows"],
     "stats": [
       "15% Chance to cast level 6 Spike Nova on Kill",
@@ -170,7 +170,7 @@
     "name": ["Hornet", "'AhmnVexVex'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/xisAmn.jpg",
-    "runes": ["Ahmn", "2xVex"],
+    "runes": ["Ahmn", "Vex", "Vex"],
     "items": ["Bows"],
     "stats": [
       "40% Cast Speed",
@@ -504,7 +504,7 @@
     "name": ["Ljosalf", "'UmGhalGhal'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/invrUm.jpg",
-    "runes": ["Um", "2xGhal"],
+    "runes": ["Um", "Ghal", "Ghal"],
     "items": ["Staves"],
     "stats": [
       "100% Chance to cast level 60 Bloodstar on Death Blow",
@@ -617,7 +617,7 @@
     "name": ["Apostasy", "'GhalGhalArc'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/r-d-05.jpg",
-    "runes": ["2xGhal", "Arcane"],
+    "runes": ["Ghal", "Ghal", "Arcane"],
     "items": ["Scepters"],
     "stats": [
       "+(3 to 4) to All Skills",
@@ -746,7 +746,7 @@
     "name": ["Dead Star", "'VenVen'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/pois-rune.jpg",
-    "runes": ["2xPoison"],
+    "runes": ["Poison", "Poison"],
     "items": ["Throwing Knives"],
     "stats": [
       "13% Chance to cast level 25 Scorpion Blade on Kill",
@@ -798,7 +798,7 @@
     "name": ["Dragon Seed", "'SilSilQor'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/phys-rune.jpg",
-    "runes": ["2xStone", "Qor"],
+    "runes": ["Stone", "Stone", "Qor"],
     "items": ["Throwing Axes"],
     "stats": [
       "1% Chance to cast level 23 Screaming Eagle on Striking",
@@ -832,7 +832,7 @@
     "name": ["Colliding Worlds", "'EldJahGulPulPul'"],
     "level": "80",
     "image": "https://docs.median-xl.com/images/runes/invrEld.jpg",
-    "runes": ["Eld", "Jah", "Gul", "2xPul"],
+    "runes": ["Eld", "Jah", "Gul", "Pul", "Pul"],
     "items": ["Amazon Bows"],
     "stats": [
       "100% Attack Speed",
@@ -904,7 +904,7 @@
     "name": ["Rusalka", "'ElBerBerOhm'"],
     "level": "78",
     "image": "https://docs.median-xl.com/images/runes/invrEl.jpg",
-    "runes": ["El", "2xBer", "Ohm"],
+    "runes": ["El", "Ber", "Ber", "Ohm"],
     "items": ["Amazon Spears"],
     "stats": [
       "10% Chance to cast level 32 Punisher Barrage on Melee Attack",
@@ -925,7 +925,7 @@
     "name": ["Lethal Huntress", "'IstVenVen'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/invrIst.jpg",
-    "runes": ["Ist", "2xPoison"],
+    "runes": ["Ist", "Poison", "Poison"],
     "items": ["Amazon Spears"],
     "stats": [
       "5% Chance to cast level 12 Javelin Nova on Kill",
@@ -944,7 +944,7 @@
     "name": ["Evanescence", "'JahEldSilSil'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/invrJo.jpg",
-    "runes": ["Jah", "Eld", "2xStone"],
+    "runes": ["Jah", "Eld", "Stone", "Stone"],
     "items": ["Amazon Spears"],
     "stats": [
       "+(3 to 4) to Amazon Skill Levels",
@@ -1556,7 +1556,7 @@
     "name": ["Tzeentch", "'TahaTahaQor'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/r-d-02.jpg",
-    "runes": ["2xTaha", "Qor"],
+    "runes": ["Taha", "Taha", "Qor"],
     "items": ["Necromancer Scythes"],
     "stats": [
       "4% Chance to cast level 27 Punisher Barrage on Kill",
@@ -1573,7 +1573,7 @@
     "name": ["Leviathan", "'QorQorJah'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/r-d-11.jpg",
-    "runes": ["2xQor", "Jah"],
+    "runes": ["Qor", "Qor", "Jah"],
     "items": ["Necromancer Scythes"],
     "stats": [
       "30% Attack Speed",
@@ -1809,7 +1809,7 @@
     "name": ["Aether", "'JahDolDol'"],
     "level": "80",
     "image": "https://docs.median-xl.com/images/runes/invrJo.jpg",
-    "runes": ["Jah", "2xDol"],
+    "runes": ["Jah", "Dol", "Dol"],
     "items": ["Necromancer Crossbows"],
     "stats": [
       "20% Attack Speed",
@@ -1906,7 +1906,7 @@
     "name": ["Ensi", "'IgnIgnHelThul'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/fire-rune.jpg",
-    "runes": ["2xFire", "Hel", "Thul"],
+    "runes": ["Fire", "Fire", "Hel", "Thul"],
     "items": ["Paladin Spears"],
     "stats": [
       "40% Chance to cast level 60 Cataclysm on Melee Attack",
@@ -2041,7 +2041,7 @@
     "name": ["Helgrotha", "'VenVenIth'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/pois-rune.jpg",
-    "runes": ["2xPoison", "Ith"],
+    "runes": ["Poison", "Poison", "Ith"],
     "items": ["Sorceress Orbs"],
     "stats": [
       "+2 to Sorceress Skill Levels",
@@ -2192,7 +2192,7 @@
     "name": ["Rebel", "'ZolSilSilLo'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/xisSol.jpg",
-    "runes": ["Zol", "2xStone", "Lo"],
+    "runes": ["Zol", "Stone", "Stone", "Lo"],
     "items": ["Body Armors"],
     "stats": [
       "15% Combat Speeds",
@@ -3388,7 +3388,7 @@
     "name": ["Warpath", "'OhnLemLem'"],
     "level": "115",
     "image": "https://docs.median-xl.com/images/runes/xisOhm.jpg",
-    "runes": ["Ohn", "2xLem"],
+    "runes": ["Ohn", "Lem", "Lem"],
     "items": ["Barbarian Shields"],
     "stats": [
       "25% Chance to cast level 4 Time Strike on Melee Attack",
@@ -3419,7 +3419,7 @@
     "name": ["Nature's Grace", "'KoVenVenIth'"],
     "level": "100",
     "image": "https://docs.median-xl.com/images/runes/invrKo.jpg",
-    "runes": ["Ko", "2xPoison", "Ith"],
+    "runes": ["Ko", "Poison", "Poison", "Ith"],
     "items": ["Druid Helms"],
     "stats": [
       "+(1 to 2) to Druid Skill Levels",

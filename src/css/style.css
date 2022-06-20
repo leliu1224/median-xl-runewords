@@ -10,12 +10,16 @@
 
 body {
   color: #eeeeee;
+  background: url("../images/diablo.png");
   background-color: #000000;
+  background-attachment: fixed;
 }
 
 header {
   color: #eeeeee;
-  background-color: #6a6968;
+
+/* background: linear-gradient(#685e54 4%, #000000 0 6%, #303030 0 95%, #000000 0 97%, #685e54 0 100%); */
+  background: linear-gradient(#685e54 4%, #303030 0 95%,  #685e54 0 100%);
 }
 
 header div {
@@ -25,6 +29,8 @@ header div {
 }
 
 header div h1 {
+  font-family: "AvQest", "serif";
+  font-size: 3em;
   margin: 0;
 }
 
@@ -50,8 +56,13 @@ form.search-form {
   margin-top: 1em;
 }
 
+.complete-runeword-container input {
+  cursor: pointer;
+}
+
 .complete-runeword-container label {
   margin-left: 0.5em;
+  cursor: pointer;
 }
 
 .rune-container {
@@ -76,7 +87,20 @@ form.search-form {
 }
 
 .runeword-container h1 {
-  font-family: AvQest;
+  font-family: "AvQest", "serif";
+  margin: 0;
+  color: #908858;
+}
+
+.no-results-container {
+  padding: 1em;
+  border: 1px solid #908858;
+  background-color: #000000;
+}
+
+.no-results-container h1 {
+  font-family: "AvQest",
+  "serif";
   margin: 0;
   color: #908858;
 }
@@ -86,12 +110,14 @@ form.search-form {
 }
 
 .section-header {
+  font-family: "AvQest", "serif";
   margin-top: 1.5em;
   margin-bottom: 0;
 }
 
 .section-subheader {
   margin-top: 0;
+  color: #aaaaaa;
 }
 
 .runeword-container ul {
@@ -109,7 +135,7 @@ form.search-form {
 }
 
 .runeword-runes li {
-  font-family: AvQest;
+  font-family: "AvQest", "serif";
   font-weight: 600;
   display: inline-block;
   padding-right: 5px;
@@ -134,6 +160,7 @@ div[class^="runeword-container"] {
   width: 27%;
   margin: 1%;
   border: 1px solid #908858;
+  background-color: #000000;
 }
 
 ul {
@@ -180,12 +207,12 @@ input[type="checkbox"][id^="rune"] {
 }
 
 .rune-container label {
-  font-family: AvQest;
+  font-family: "AvQest", "serif";
   font-weight: 600;
   position: relative;
   display: block;
   min-width: 60px;
-  margin: 3px;
+  margin: 5px;
   padding: 5px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -194,22 +221,24 @@ input[type="checkbox"][id^="rune"] {
           user-select: none;
   text-align: center;
   color: #908858;
-  border: 1px solid #888888;
+  border: 2px solid #ffffff;
+  background-color: #000000;
 
   -webkit-touch-callout: none;
    -khtml-user-select: none;
 }
 
 .rune-container label::before {
-  line-height: 28px;
+  font-size: 12px;
+  line-height: 24px;
   position: absolute;
   top: -5px;
   left: -5px;
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   content: " ";
-  transition-duration: 0.4s;
+  transition-duration: 0.1s;
   transform: scale(0);
   text-align: center;
   color: white;

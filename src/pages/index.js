@@ -32,10 +32,12 @@ const IndexPage = props => {
   let [checkedRunewords, setCheckedRunewords] = useState(runewords)
   // Runewords to display - can be different from checkedRunewords due to searches
   let [displayRunewords, setDisplayRunewords] = useState(runewords)
+  // Runewords that have already been filtered by input field or completed checkbox
+  let [filteredRunewords, setFilteredRunes] = useState(runewords)
   // State for the completed runeword checkbox
   let [needCompleteRunewords, setNeedCompleteRunewords] = useState(false)
 
-  const handleCheckbox = (position, rune) => {
+  const handleRuneSelection = (position, rune) => {
     // set the checked state to the opposite for the runes
     runeChecked[position][1] = !runeChecked[position][1]
     setRuneChecked(runeChecked)
@@ -54,7 +56,7 @@ const IndexPage = props => {
 
         // Handle search; also why is this not being done when the checked runes are not empty
         if (searchValue != "") {
-          searchInput(runewords)
+          setDisplayRunewords(applySearchFilter(runewords))
         }
         return
       }
@@ -88,19 +90,28 @@ const IndexPage = props => {
     setDisplayRunewords(filteredRunewords)
 
     if (searchValue != "") {
-      searchInput(filteredRunewords)
+      setDisplayRunewords(applySearchFilter(filteredRunewords))
     }
   }
 
-  const handleInputChange = event => {
+  const handleSearchChange = event => {
     setSearchValue(event.target.value)
     // reset the display if there is nothing being searched
     if (event.target.value == "") {
-      setDisplayRunewords(checkedRunewords)
+      // run the completed filter again
+
+      let runewordsToSearch =
+        checkedRunewords.length > 0 ? checkedRunewords : runewords
+
+      if (needCompleteRunewords) {
+        filteredRunewords = applyCompletedFilter(runewordsToSearch)
+      }
+
+      setDisplayRunewords(filteredRunewords)
     }
   }
 
-  const searchInput = runewordsToSearch => {
+  const applySearchFilter = runewordsToSearch => {
     let filteredRunewords = runewordsToSearch.filter(runeword => {
       let { name, items, stats } = runeword.node
       return (
@@ -112,18 +123,60 @@ const IndexPage = props => {
           stats.join("").toLowerCase().includes(searchValue.toLowerCase()))
       )
     })
+    return filteredRunewords
+  }
+
+  const handleCompletedCheckbox = () => {
+    // set the requirement for completed runewords
+    setNeedCompleteRunewords(!needCompleteRunewords)
+    let runewordsToSearch =
+      checkedRunewords.length > 0 ? checkedRunewords : runewords
+    let filteredRunewords = runewordsToSearch
+
+    if (!needCompleteRunewords) {
+      filteredRunewords = applyCompletedFilter(runewordsToSearch)
+    }
+
+    if (searchValue != "") {
+      filteredRunewords = applySearchFilter(filteredRunewords)
+    }
+
     setDisplayRunewords(filteredRunewords)
   }
 
-  const handleRunewordCheckbox = () => {
-    // set the requirement for completed runewords
-    setNeedCompleteRunewords(!needCompleteRunewords)
+  const applyCompletedFilter = runewordsToSearch => {
+    // go through runeChecked and run the filtering to see which rune are checked and create a separate array for that
+    let runeToSearch = runeChecked
+      .filter(rune => {
+        return rune[1] == true
+      })
+      .map(rune => {
+        return rune[0]
+      })
+
+    let filteredRunewords = runewordsToSearch
+
+    // Run the filtering for the checked runes
+    filteredRunewords = runewordsToSearch.filter(runeword => {
+      // The required runes for the runeword
+      let requiredRunes = runeword.node.runes
+      return requiredRunes.every(rune => runeToSearch.includes(rune))
+    })
+
+    return filteredRunewords
   }
 
   const handleSearch = event => {
     let runewordsToSearch =
       checkedRunewords.length > 0 ? checkedRunewords : runewords
-    searchInput(runewordsToSearch)
+
+    let filteredRunewords = applySearchFilter(runewordsToSearch)
+
+    if (needCompleteRunewords) {
+      filteredRunewords = applyCompletedFilter(filteredRunewords)
+    }
+
+    setDisplayRunewords(filteredRunewords)
     event.preventDefault()
   }
 
@@ -139,7 +192,7 @@ const IndexPage = props => {
       <Seo title="Home" />
 
       {/* RUNEWORD CHECKBOXES */}
-      <h1 className="text-center section-header">Runes</h1>
+      <h1 className="text-center section-header">RUNES</h1>
       <p className="text-center section-subheader">(select the ones you own)</p>
       <div className="runes-wrapper">
         {runes.map((rune, index) => {
@@ -151,7 +204,7 @@ const IndexPage = props => {
                 name={rune.node.name}
                 value={rune.node.name}
                 checked={runeChecked[index][1]}
-                onChange={() => handleCheckbox(index, rune.node.name)}
+                onChange={() => handleRuneSelection(index, rune.node.name)}
               />
 
               <label htmlFor={`rune-checkbox-${index}`}>
@@ -167,7 +220,7 @@ const IndexPage = props => {
         })}
       </div>
 
-      <h1 className="text-center  section-header">Possible Runewords</h1>
+      <h1 className="text-center  section-header">POSSIBLE RUNEWORDS</h1>
       {/* SEARCH FIELD */}
       <div className="form-wrapper">
         <form className="search-form" onSubmit={handleSearch}>
@@ -176,7 +229,7 @@ const IndexPage = props => {
             type="search"
             placeholder="Search Runeword, Item, or Stat"
             aria-label="Search Runeword, Item, or Stat"
-            onChange={handleInputChange}
+            onChange={handleSearchChange}
             value={searchValue}
           />
           <button
@@ -193,39 +246,48 @@ const IndexPage = props => {
             name="complete-runeword"
             value="Complete Runeword"
             checked={needCompleteRunewords}
-            onChange={() => handleRunewordCheckbox()}
+            onChange={() => handleCompletedCheckbox()}
           />
-          <label htmlFor="complete-runeword">Completed Runewords Only</label>
+          <label
+            // htmlFor="complete-runeword"
+            onClick={() => handleCompletedCheckbox()}
+          >
+            Completed Runewords Only
+          </label>
         </div>
       </div>
 
       {/* RUNEWORD LIST */}
       <div className="runewords-wrapper">
-        {displayRunewords
-          ? // Apply filter here to check the second index of runeword.node.name matches anything in the array
-            displayRunewords.map((runeword, i) => {
-              return (
-                <div
-                  key={`runeword-container-${i}`}
-                  className="runeword-container"
-                >
-                  <h1 key={`name-${i}`}>{runeword.node.name[0]}</h1>{" "}
-                  <div className="runeword-runes">
-                    {getStats(runeword.node.runes, "rune")}
-                  </div>
-                  <div className="runeword-items">
-                    {getStats(runeword.node.items, "item")}
-                  </div>
-                  <div className="runeword-level">
-                    <p>Required Level {runeword.node.level}</p>{" "}
-                  </div>
-                  <div className="runeword-stats">
-                    {getStats(runeword.node.stats, "stat")}
-                  </div>
+        {displayRunewords.length > 0 ? (
+          // Apply filter here to check the second index of runeword.node.name matches anything in the array
+          displayRunewords.map((runeword, i) => {
+            return (
+              <div
+                key={`runeword-container-${i}`}
+                className="runeword-container"
+              >
+                <h1 key={`name-${i}`}>{runeword.node.name[0]}</h1>{" "}
+                <div className="runeword-runes">
+                  {getStats(runeword.node.runes, "rune")}
                 </div>
-              )
-            })
-          : "Loading..."}
+                <div className="runeword-items">
+                  {getStats(runeword.node.items, "item")}
+                </div>
+                <div className="runeword-level">
+                  <p>Required Level {runeword.node.level}</p>{" "}
+                </div>
+                <div className="runeword-stats">
+                  {getStats(runeword.node.stats, "stat")}
+                </div>
+              </div>
+            )
+          })
+        ) : (
+          <div className="no-results-container">
+            <h1>No Results</h1>
+          </div>
+        )}
       </div>
     </Layout>
   )
