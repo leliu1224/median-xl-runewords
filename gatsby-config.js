@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Median XL Runewords`,
-    description: `Runeword list with filtering`,
+    description: `Median XL runeword list filtering`,
     author: `@leliu`,
     siteUrl: `https://leliu.me`,
   },
