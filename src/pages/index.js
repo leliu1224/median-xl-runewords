@@ -22,6 +22,7 @@ const IndexPage = props => {
   const runesCheckedArray = runes.map(function (node) {
     return [node.node.name, false]
   })
+
   // What runeword are checked
   let [runeChecked, setRuneChecked] = useState(runesCheckedArray)
   // search inputs
@@ -105,6 +106,8 @@ const IndexPage = props => {
 
       if (needCompleteRunewords) {
         filteredRunewords = applyCompletedFilter(runewordsToSearch)
+      } else {
+        filteredRunewords = runewordsToSearch
       }
 
       setDisplayRunewords(filteredRunewords)
@@ -189,7 +192,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Runewords" />
 
       {/* RUNEWORD CHECKBOXES */}
       <h1 className="text-center section-header">RUNES</h1>

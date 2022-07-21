@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/median-xl-runewords",
   siteMetadata: {
     title: `Median XL Runewords`,
     description: `Median XL runeword list filtering`,

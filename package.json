@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "median-xl-runewords",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A list of runeword for the Median XL mod for the Diablo 2 game, with filtering and search functionalities.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Le Liu <https://github.com/leliu1224>",
   "dependencies": {
     "gatsby": "^4.2.0",
     "gatsby-image": "^3.11.0",
@@ -22,6 +22,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.4.1"
   },
   "keywords": [
@@ -36,13 +37,15 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "heroku-postbuild": "gatsby build"
+    "heroku-postbuild": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/leliu1224/median-xl-runewords"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/leliu1224/median-xl-runewords/issues"
   }
 }
