@@ -1,14 +1,16 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React, { useState } from "react";
+import { graphql } from "gatsby";
 
-import Image from "../components/image"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Image from "../components/image";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+
+import "../css/style.css";
 
 const IndexPage = props => {
-  const { data } = props
-  const runewords = data.allRunewordsJson.edges
-  const runes = data.allRunesJson.edges
+  const { data } = props;
+  const runewords = data.allRunewordsJson.edges;
+  const runes = data.allRunesJson.edges;
 
   // // get the list of item types
   // const items = runewords.map(function (runeword) {
@@ -20,103 +22,103 @@ const IndexPage = props => {
   // Find the index values of the checkState array that has the value of 1
   // Grab the value of those index in the Runes array and push them into a separate array to be searched
   const runesCheckedArray = runes.map(function (node) {
-    return [node.node.name, false]
-  })
+    return [node.node.name, false];
+  });
 
   // What runeword are checked
-  let [runeChecked, setRuneChecked] = useState(runesCheckedArray)
+  let [runeChecked, setRuneChecked] = useState(runesCheckedArray);
   // search inputs
-  let [searchValue, setSearchValue] = useState("")
+  let [searchValue, setSearchValue] = useState("");
   // number of runes searching
-  let [searchRuneCount, setSearchRuneCount] = useState(0)
+  let [searchRuneCount, setSearchRuneCount] = useState(0);
   // Runewords from checked runes
-  let [checkedRunewords, setCheckedRunewords] = useState(runewords)
+  let [checkedRunewords, setCheckedRunewords] = useState(runewords);
   // Runewords to display - can be different from checkedRunewords due to searches
-  let [displayRunewords, setDisplayRunewords] = useState(runewords)
+  let [displayRunewords, setDisplayRunewords] = useState(runewords);
   // Runewords that have already been filtered by input field or completed checkbox
-  let [filteredRunewords, setFilteredRunes] = useState(runewords)
+  let [filteredRunewords, setFilteredRunes] = useState(runewords);
   // State for the completed runeword checkbox
-  let [needCompleteRunewords, setNeedCompleteRunewords] = useState(false)
+  let [needCompleteRunewords, setNeedCompleteRunewords] = useState(false);
 
   const handleRuneSelection = (position, rune) => {
     // set the checked state to the opposite for the runes
-    runeChecked[position][1] = !runeChecked[position][1]
-    setRuneChecked(runeChecked)
+    runeChecked[position][1] = !runeChecked[position][1];
+    setRuneChecked(runeChecked);
 
     // Check if the rune is checked
     if (runeChecked[position][1]) {
-      setSearchRuneCount(searchRuneCount + 1)
+      setSearchRuneCount(searchRuneCount + 1);
       // Push the rune to the array for search
     } else {
-      setSearchRuneCount(searchRuneCount - 1)
+      setSearchRuneCount(searchRuneCount - 1);
       // Just keep a simple int state variable to see how many runes are being searched
       if (searchRuneCount - 1 == 0) {
         // if nothing is being checked, set the runewords to all runewords
-        setCheckedRunewords(runewords)
-        setDisplayRunewords(runewords)
+        setCheckedRunewords(runewords);
+        setDisplayRunewords(runewords);
 
         // Handle search; also why is this not being done when the checked runes are not empty
         if (searchValue != "") {
-          setDisplayRunewords(applySearchFilter(runewords))
+          setDisplayRunewords(applySearchFilter(runewords));
         }
-        return
+        return;
       }
     }
 
     // go through runeChecked and run the filtering to see which rune are checked and create a separate array for that
     let runeToSearch = runeChecked
       .filter(rune => {
-        return rune[1] == true
+        return rune[1] == true;
       })
       .map(rune => {
-        return rune[0]
-      })
+        return rune[0];
+      });
 
     // Run the filtering for the checked runes
     let filteredRunewords = runewords.filter(runeword => {
       // The required runes for the runeword
-      const requiredRunes = runeword.node.runes
+      const requiredRunes = runeword.node.runes;
 
       // if the runeword needs to be complete
       if (needCompleteRunewords) {
-        return requiredRunes.every(rune => runeToSearch.includes(rune))
+        return requiredRunes.every(rune => runeToSearch.includes(rune));
       }
       // check to see if it at least requires some of the runes
-      return runeToSearch.some(rune => requiredRunes.indexOf(rune) >= 0)
-    })
+      return runeToSearch.some(rune => requiredRunes.indexOf(rune) >= 0);
+    });
 
     // set the runewords resulting from checked runes
-    setCheckedRunewords(filteredRunewords)
+    setCheckedRunewords(filteredRunewords);
     // set the runewords to be displayed after applying search
-    setDisplayRunewords(filteredRunewords)
+    setDisplayRunewords(filteredRunewords);
 
     if (searchValue != "") {
-      setDisplayRunewords(applySearchFilter(filteredRunewords))
+      setDisplayRunewords(applySearchFilter(filteredRunewords));
     }
-  }
+  };
 
   const handleSearchChange = event => {
-    setSearchValue(event.target.value)
+    setSearchValue(event.target.value);
     // reset the display if there is nothing being searched
     if (event.target.value == "") {
       // run the completed filter again
 
       let runewordsToSearch =
-        checkedRunewords.length > 0 ? checkedRunewords : runewords
+        checkedRunewords.length > 0 ? checkedRunewords : runewords;
 
       if (needCompleteRunewords) {
-        filteredRunewords = applyCompletedFilter(runewordsToSearch)
+        filteredRunewords = applyCompletedFilter(runewordsToSearch);
       } else {
-        filteredRunewords = runewordsToSearch
+        filteredRunewords = runewordsToSearch;
       }
 
-      setDisplayRunewords(filteredRunewords)
+      setDisplayRunewords(filteredRunewords);
     }
-  }
+  };
 
   const applySearchFilter = runewordsToSearch => {
     let filteredRunewords = runewordsToSearch.filter(runeword => {
-      let { name, items, stats } = runeword.node
+      let { name, items, stats } = runeword.node;
       return (
         (name &&
           name.join("").toLowerCase().includes(searchValue.toLowerCase())) ||
@@ -124,71 +126,71 @@ const IndexPage = props => {
           items.join("").toLowerCase().includes(searchValue.toLowerCase())) ||
         (stats &&
           stats.join("").toLowerCase().includes(searchValue.toLowerCase()))
-      )
-    })
-    return filteredRunewords
-  }
+      );
+    });
+    return filteredRunewords;
+  };
 
   const handleCompletedCheckbox = () => {
     // set the requirement for completed runewords
-    setNeedCompleteRunewords(!needCompleteRunewords)
+    setNeedCompleteRunewords(!needCompleteRunewords);
     let runewordsToSearch =
-      checkedRunewords.length > 0 ? checkedRunewords : runewords
-    let filteredRunewords = runewordsToSearch
+      checkedRunewords.length > 0 ? checkedRunewords : runewords;
+    let filteredRunewords = runewordsToSearch;
 
     if (!needCompleteRunewords) {
-      filteredRunewords = applyCompletedFilter(runewordsToSearch)
+      filteredRunewords = applyCompletedFilter(runewordsToSearch);
     }
 
     if (searchValue != "") {
-      filteredRunewords = applySearchFilter(filteredRunewords)
+      filteredRunewords = applySearchFilter(filteredRunewords);
     }
 
-    setDisplayRunewords(filteredRunewords)
-  }
+    setDisplayRunewords(filteredRunewords);
+  };
 
   const applyCompletedFilter = runewordsToSearch => {
     // go through runeChecked and run the filtering to see which rune are checked and create a separate array for that
     let runeToSearch = runeChecked
       .filter(rune => {
-        return rune[1] == true
+        return rune[1] == true;
       })
       .map(rune => {
-        return rune[0]
-      })
+        return rune[0];
+      });
 
-    let filteredRunewords = runewordsToSearch
+    let filteredRunewords = runewordsToSearch;
 
     // Run the filtering for the checked runes
     filteredRunewords = runewordsToSearch.filter(runeword => {
       // The required runes for the runeword
-      let requiredRunes = runeword.node.runes
-      return requiredRunes.every(rune => runeToSearch.includes(rune))
-    })
+      let requiredRunes = runeword.node.runes;
+      return requiredRunes.every(rune => runeToSearch.includes(rune));
+    });
 
-    return filteredRunewords
-  }
+    return filteredRunewords;
+  };
 
   const handleSearch = event => {
     let runewordsToSearch =
-      checkedRunewords.length > 0 ? checkedRunewords : runewords
+      checkedRunewords.length > 0 ? checkedRunewords : runewords;
 
-    let filteredRunewords = applySearchFilter(runewordsToSearch)
+    let filteredRunewords = applySearchFilter(runewordsToSearch);
 
     if (needCompleteRunewords) {
-      filteredRunewords = applyCompletedFilter(filteredRunewords)
+      filteredRunewords = applyCompletedFilter(filteredRunewords);
     }
 
-    setDisplayRunewords(filteredRunewords)
-    event.preventDefault()
-  }
+    setDisplayRunewords(filteredRunewords);
+    event.preventDefault();
+  };
 
   const getStats = (statList, type) => {
     const listItems = statList.map((statLine, i) => {
-      if (statLine != "") return <li key={`${type}-${i}`}>{statLine}</li>
-    })
-    return <ul>{listItems}</ul>
-  }
+      if (statLine != "") return <li key={`${type}-${i}`}>{statLine}</li>;
+    });
+    return <ul>{listItems}</ul>;
+  };
 
   return (
     <Layout>
@@ -219,7 +221,7 @@ const IndexPage = props => {
                 {rune.node.name}
               </label>
             </div>
-          )
+          );
         })}
       </div>
 
@@ -284,7 +286,7 @@ const IndexPage = props => {
                   {getStats(runeword.node.stats, "stat")}
                 </div>
               </div>
-            )
+            );
           })
         ) : (
           <div className="no-results-container">
@@ -293,10 +295,10 @@ const IndexPage = props => {
         )}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query {
@@ -319,4 +321,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

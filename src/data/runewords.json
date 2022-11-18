@@ -383,7 +383,6 @@
          "One-Handed Swords"
       ],
       "stats":[
-         "Indestructible",
          "+(3 to 4) to Druid Skill Levels",
          "55% Attack Speed",
          "Adds 5-10 Damage",
@@ -393,7 +392,8 @@
          "+(20 to 40) to all Attributes",
          "+80 to Mana",
          "Regenerate Mana +(15 to 25)%",
-         "Physical Resist 5%"
+         "Physical Resist 5%",
+         "+15 Life after each Kill"
       ]
    },
    {
@@ -490,7 +490,6 @@
          "One-Handed Axes"
       ],
       "stats":[
-         "Indestructible",
          "+6 to Druid Skill Levels",
          "+(48 to 60)% Bonus Damage to Mark of the Wild",
          "+(18 to 20)% Bonus Elemental Damage to Mark of the Wild",
@@ -499,7 +498,7 @@
          "+(45 to 55)% to Fire Spell Damage",
          "-50% to Enemy Fire Resistance",
          "Physical Resist (10 to 15)%",
-         "+(200 to 250) Life after each Kill"
+         "+(215 to 265) Life after each Kill"
       ]
    },
    {
@@ -547,13 +546,13 @@
          "(except Necromancer Daggers)"
       ],
       "stats":[
-         "Indestructible",
          "25% Combat Speeds",
          "Adds (10 to 20)-50 Damage",
          "Adds 100-150 Lightning Damage",
          "-(15 to 20)% to Enemy Lightning Resistance",
          "+(120 to 150)% Enhanced Damage",
          "+10% to Summoned Minion Life",
+         "+15 Life after each Kill",
          "2% Reanimate as: Random Monster"
       ]
    },
@@ -628,8 +627,7 @@
          "(except Hammers)"
       ],
       "stats":[
-         "Indestructible",
-         "25% Chance to cast level 55 Infected Roots on Melee Attack",
+         "25% Chance to cast level 35 Infected Roots on Melee Attack",
          "+(126 to 250) to Maximum Damage",
          "Stun Attack",
          "+(172 to 200)% Enhanced Damage",
@@ -638,7 +636,8 @@
          "+(39 to 45)% to Poison Spell Damage",
          "-(39 to 45)% to Enemy Poison Resistance",
          "20% to Vitality",
-         "+(51 to 125) Mana on Striking"
+         "+(51 to 125) Mana on Striking",
+         "+15 Life after each Kill"
       ]
    },
    {
@@ -647,7 +646,7 @@
          "'Tir'"
       ],
       "level":"10",
-      "image":"https://docs.median-xl.com/images/runes/invrEl.jpg",
+      "image":"https://docs.median-xl.com/images/runes/invrTir.jpg",
       "runes":[
          "Tir"
       ],
@@ -866,7 +865,6 @@
          "Scepters"
       ],
       "stats":[
-         "5% Chance to cast level 8 Bloodlust on Death Blow",
          "+4 to Amazon Skill Levels",
          "+13% Bonus Elemental Damage to Bloodlust",
          "40% Cast Speed",
@@ -985,8 +983,7 @@
          "(except Hammers)"
       ],
       "stats":[
-         "Indestructible",
-         "25% Chance to cast level 55 Infected Roots on Melee Attack",
+         "25% Chance to cast level 35 Infected Roots on Melee Attack",
          "+(126 to 250) to Maximum Damage",
          "Stun Attack",
          "+(172 to 200)% Enhanced Damage",
@@ -995,7 +992,8 @@
          "+(39 to 45)% to Poison Spell Damage",
          "-(39 to 45)% to Enemy Poison Resistance",
          "20% to Vitality",
-         "+(51 to 125) Mana on Striking"
+         "+(51 to 125) Mana on Striking",
+         "+15 Life after each Kill"
       ]
    },
    {
@@ -1193,7 +1191,6 @@
          "Throwing Axes"
       ],
       "stats":[
-         "Indestructible",
          "3% Chance to cast level 60 Thunder Slam on Kill",
          "-19% to Enemy Poison Resistance",
          "+(6 to 11) to Snake Stance (Barbarian Only)",
@@ -1201,7 +1198,7 @@
          "5% to Vitality",
          "Maximum Life +3%",
          "Regenerate Mana +15%",
-         "+100 Life after each Kill"
+         "+115 Life after each Kill"
       ]
    },
    {
@@ -1966,13 +1963,13 @@
          "(except Barbarian Two-Handed Axes)"
       ],
       "stats":[
-         "Indestructible",
+         "+1 to All Skills",
          "20% Base Block Chance",
          "Adds 1200-1550 Fire Damage",
          "-50% to Enemy Fire Resistance",
          "100% to Strength",
-         "Maximum Block Chance -30%",
-         "Physical Resist (1 to 10)%"
+         "Maximum Block Chance -20%",
+         "Physical Resist (15 to 20)%"
       ]
    },
    {
@@ -2100,7 +2097,7 @@
          "Adds 55-110 Damage",
          "+(166 to 195)% Enhanced Damage",
          "10% Deadly Strike",
-         "Enhanced Weapon Damage +(101 to 150)%",
+         "+(25 to 35)% to Summoned Minion Resistances",
          "+(150 to 200) to Dexterity",
          "Physical Resist (5 to 10)%",
          "+5 Life on Striking"
@@ -2263,6 +2260,32 @@
          "+(1000 to 2000) Defense",
          "+(3 to 5) Life on Striking",
          "(25 to 40)% Magic Find"
+      ]
+   },
+   {
+      "name":[
+         "Louhi",
+         "'VenOhnXod'"
+      ],
+      "level":"120",
+      "image":"https://docs.median-xl.com/images/runes/pois-rune.jpg",
+      "runes":[
+         "Poison",
+         "Ohn",
+         "Xod"
+      ],
+      "items":[
+         "Druid Staves"
+      ],
+      "stats":[
+         "+(9 to 10) to All Skills",
+         "20% Hit Recovery",
+         "+(30 to 40)% to Poison Spell Damage",
+         "-(30 to 35)% to Enemy Poison Resistance",
+         "+(5000 to 10000) Defense",
+         "Maximum Life +(3 to 5)%",
+         "Maximum Elemental Resists +1%",
+         "Physical Resist 5%"
       ]
    },
    {
@@ -3004,7 +3027,6 @@
          "Paladin Clubs, Paladin Maces, Paladin Hammers"
       ],
       "stats":[
-         "Indestructible",
          "Additional Dexterity Damage Bonus: 0.078125%",
          "80% Attack Speed",
          "+(111 to 140) to Maximum Damage",
@@ -3014,7 +3036,8 @@
          "5% Deadly Strike",
          "Slow Target 10%",
          "+200 to Strength",
-         "+200 to Dexterity"
+         "+200 to Dexterity",
+         "+15 Life after each Kill"
       ]
    },
    {
@@ -3130,7 +3153,6 @@
          "Sorceress Orbs"
       ],
       "stats":[
-         "Indestructible",
          "5% Chance to cast level 44 Frigid Nova when Struck",
          "+(4 to 5) to All Skills",
          "+(40 to 50) Spell Focus",
@@ -3194,27 +3216,30 @@
    },
    {
       "name":[
-         "Khany",
-         "'QorLoEth'"
+         "Mirage",
+         "'ElqOhnVezLozGurXod'"
       ],
-      "level":"100",
-      "image":"https://docs.median-xl.com/images/runes/r-d-11.jpg",
+      "level":"120",
+      "image":"https://docs.median-xl.com/images/runes/xisEld.jpg",
       "runes":[
-         "Qor",
-         "Lo",
-         "Eth"
+         "Elq",
+         "Ohn",
+         "Vez",
+         "Loz",
+         "Gur",
+         "Xod"
       ],
       "items":[
          "Sorceress Crystal Swords"
       ],
       "stats":[
-         "30% Attack Speed",
-         "30% Block Speed",
-         "Adds 50-125 Damage",
-         "+(110 to 140)% Enhanced Damage",
-         "5% Deadly Strike",
-         "+(50 to 75) to Dexterity",
-         "(10 to 15)% Magic Find"
+         "10% Chance to cast level 4 Time Strike on Striking",
+         "+(2 to 3) to All Skills",
+         "50% Combat Speeds",
+         "+(220 to 250) to Maximum Damage",
+         "+(180 to 200)% Enhanced Damage",
+         "+75 to Dexterity",
+         "Maximum Block Chance +25%"
       ]
    },
    {
@@ -3707,12 +3732,12 @@
          "Shields"
       ],
       "stats":[
-         "Indestructible",
          "+1 to All Skills",
          "40% Block Speed",
          "+(144 to 171)% Enhanced Defense",
          "40% to Strength",
          "40% to Vitality",
+         "+15 Life after each Kill",
          "(11 to 20)% Bonus to Defense",
          "Attacker Takes Fire Damage of 500"
       ]
@@ -4027,6 +4052,55 @@
    },
    {
       "name":[
+         "Ahriman",
+         "'VezGhal'"
+      ],
+      "level":"115",
+      "image":"https://docs.median-xl.com/images/runes/xisVex.jpg",
+      "runes":[
+         "Vez",
+         "Ghal"
+      ],
+      "items":[
+         "Belts"
+      ],
+      "stats":[
+         "+1 to All Skills",
+         "+15 Spell Focus",
+         "Adds 100-300 Fire Damage",
+         "Adds 100-300 Lightning Damage",
+         "Adds 100-300 Cold Damage",
+         "+(31 to 50) to all Attributes",
+         "Maximum Elemental Resists +1%",
+         "Elemental Resists +(31 to 40)%",
+         "Requirements +10%"
+      ]
+   },
+   {
+      "name":[
+         "Angelic Touch",
+         "'YhamIah'"
+      ],
+      "level":"120",
+      "image":"https://docs.median-xl.com/images/runes/xisCham.jpg",
+      "runes":[
+         "Yham",
+         "Iah"
+      ],
+      "items":[
+         "Belts"
+      ],
+      "stats":[
+         "(11 to 15)% Life stolen per Hit",
+         "(11 to 15)% Deadly Strike",
+         "+(200 to 220)% Enhanced Defense",
+         "+5000 Defense",
+         "(25 to 30)% to Strength",
+         "Maximum Life and Mana +(7 to 9)%"
+      ]
+   },
+   {
+      "name":[
          "Enlightenment",
          "'El'"
       ],
@@ -4114,7 +4188,7 @@
          "Gloves"
       ],
       "stats":[
-         "15% Chance to cast level 13 Fire Splash on Kill",
+         "15% Chance to cast level 13 Seal of Fire on Kill",
          "+2 to All Skills",
          "+15% to Summoned Minion Resistances",
          "-214 Defense",
@@ -4209,13 +4283,13 @@
          "Gloves"
       ],
       "stats":[
-         "Indestructible",
          "+3 to Necromancer Skill Levels",
          "+(30 to 35)% to Summoned Minion Damage",
          "+293 Defense",
          "(21 to 35)% to Strength",
          "+(1 to 100) to Life",
-         "Regenerate Mana +(5 to 10)%"
+         "Regenerate Mana +(5 to 10)%",
+         "+15 Life after each Kill"
       ]
    },
    {
@@ -4408,25 +4482,25 @@
          "Boots"
       ],
       "stats":[
-         "Indestructible",
          "+(144 to 171)% Enhanced Defense",
          "+150 Defense",
          "+50 to Strength",
          "(21 to 25)% to Strength",
          "+50 to Vitality",
          "(21 to 25)% to Vitality",
-         "Cold Resist +25%"
+         "Cold Resist +25%",
+         "+15 Life after each Kill"
       ]
    },
    {
       "name":[
          "Knave",
-         "'QorChamQor'"
+         "'SolChamQor'"
       ],
       "level":"100",
-      "image":"https://docs.median-xl.com/images/runes/r-d-11.jpg",
+      "image":"https://docs.median-xl.com/images/runes/invrSol.jpg",
       "runes":[
-         "Qor",
+         "Sol",
          "Cham",
          "Qor"
       ],
@@ -4436,6 +4510,7 @@
       "stats":[
          "+(0 to 1) to Sorceress Skill Levels",
          "5% Deadly Strike",
+         "+40 to Mana",
          "Maximum Mana +(5 to 10)%",
          "Magic Resist +(2 to 5)%",
          "Physical Resist (2 to 5)%"
@@ -4617,7 +4692,7 @@
       ],
       "stats":[
          "+2 to Amazon Skill Levels",
-         "+(24 to 27) to Orb of Annihilation",
+         "+(32 to 37) to Orb of Annihilation",
          "Maximum Mana +(4 to 7)%",
          "Regenerate Mana +(15 to 20)%",
          "Fire Resist +25%",
@@ -4703,9 +4778,7 @@
          "50% Cast Speed",
          "+(15 to 20)% to Fire Spell Damage",
          "-(15 to 20)% to Enemy Fire Resistance",
-         "+(9 to 12) to Bacchanalia (Amazon Only)",
          "+(141 to 171)% Enhanced Defense",
-         "-80 Life Regenerated per Second",
          "Physical Resist (5 to 10)%",
          "(20 to 30)% Magic Find"
       ]
@@ -4806,7 +4879,7 @@
          "1% Base Block Chance",
          "+(10 to 15)% Bonus to Spell Focus",
          "40% Block Speed",
-         "+(7 to 10)% to Spell Damage",
+         "+(15 to 20)% to Spell Damage",
          "-(15 to 20)% to Enemy Lightning Resistance",
          "5% to Dexterity",
          "5% to Energy"
@@ -5024,11 +5097,11 @@
          "Barbarian Helms"
       ],
       "stats":[
-         "Indestructible",
          "80% Combat Speeds",
          "+(9 to 15) to Cautious Strike",
          "+200% Enhanced Defense",
          "+(251 to 300) to Dexterity",
+         "+15 Life after each Kill",
          "(26 to 32)% Gold Find"
       ]
    },
@@ -5229,10 +5302,9 @@
          "Druid Helms"
       ],
       "stats":[
-         "+(3 to 4) to Druid Skill Levels",
+         "+(4 to 5) to Druid Skill Levels",
          "+15 Spell Focus",
          "-10% to Enemy Poison Resistance",
-         "+(18 to 22) to Devouring Cloud",
          "+(30 to 40)% to Summoned Minion Life",
          "+(10 to 20)% to Summoned Minion Resistances",
          "+(120 to 150)% Enhanced Defense",
@@ -5244,25 +5316,26 @@
    {
       "name":[
          "Typhoon",
-         "'ZolElqVen'"
+         "'ZolElqGla'"
       ],
       "level":"100",
       "image":"https://docs.median-xl.com/images/runes/xisSol.jpg",
       "runes":[
          "Zol",
          "Elq",
-         "Poison"
+         "Ice"
       ],
       "items":[
          "Druid Helms"
       ],
       "stats":[
+         "3% Chance to cast level 10 Shower of Rocks on Melee Attack",
          "+10 to Maximum Damage",
          "+(300 to 500) to Attack Rating",
          "-(10 to 15)% to Enemy Cold Resistance",
          "+(8 to 12) to Twisted Claw (Druid Only)",
          "+(141 to 171)% Enhanced Defense",
-         "(15 to 20)% to Strength",
+         "(20 to 25)% to Strength",
          "Maximum Mana +10%",
          "Maximum Elemental Resists +1%",
          "Physical Resist 5%"
@@ -5284,7 +5357,7 @@
       ],
       "stats":[
          "+2 to Druid Skill Levels",
-         "65% Attack Speed",
+         "25% Attack Speed",
          "+(172 to 200)% Enhanced Defense",
          "(40 to 45)% to Dexterity",
          "Maximum Mana +(11 to 20)%",
@@ -5575,12 +5648,12 @@
    {
       "name":[
          "Vortex",
-         "'ZurBurFul'"
+         "'SurBurFul'"
       ],
       "level":"115",
-      "image":"https://docs.median-xl.com/images/runes/xisSur.jpg",
+      "image":"https://docs.median-xl.com/images/runes/invrSur.jpg",
       "runes":[
-         "Zur",
+         "Sur",
          "Bur",
          "Light"
       ],
@@ -5615,14 +5688,14 @@
          "Sorceress Body Armors"
       ],
       "stats":[
-         "Indestructible",
          "+2 to Sorceress Skill Levels",
          "10% Cast Speed",
          "-(18 to 25)% to Enemy Elemental Resistances",
          "Slows Attacker by 10%",
          "+(144 to 171)% Enhanced Defense",
          "10% to Energy",
-         "5% Chance to Avoid Damage"
+         "5% Chance to Avoid Damage",
+         "+15 Life after each Kill"
       ]
    },
    {

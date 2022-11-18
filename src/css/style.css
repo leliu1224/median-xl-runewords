@@ -152,6 +152,7 @@ form.search-form {
 }
 
 .runeword-stats li {
+  width: 100%;
   margin-bottom: 0.75em;
   color: #8383ea;
 }

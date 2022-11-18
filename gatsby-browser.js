@@ -1,1 +1,3 @@
-import "./src/css/style.css"
+export function onServiceWorkerUpdateReady() {
+  window.location.reload(true)
+}
