@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmedian_xl_runewords=self.webpackChunkmedian_xl_runewords||[]).push([[883],{429:function(e,n,t){t.r(n);var u=t(7294),l=t(5592),r=t(262);n.default=function(){return u.createElement(l.Z,null,u.createElement(r.Z,{title:"404: Not found"}),u.createElement("h1",null,"404: Not Found"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-1dfdc732437385130cf4.js.map
