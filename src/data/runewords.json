@@ -1820,6 +1820,26 @@
    },
    {
       "name":[
+      "Talon",
+      "'Nef'"
+    ],
+    "level": "13",
+    "image": "https://docs.median-xl.com/images/runes/invrNef.jpg",
+    "runes": [
+      "Nef"
+    ],
+    "items": [
+      "Barbarian Swords"
+    ],
+    "stats": [
+      "20% Attack Speed",
+      "+(3 to 4) to Minimum Damage",
+      "+(24 to 35)% Enhanced Damage",
+      "+(6 to 10) to Dexterity"
+    ]
+  },
+  {
+    "name": [
          "Anak",
          "'HelEldBer'"
       ],
@@ -2311,8 +2331,7 @@
          "+(30 to 57)% Enhanced Damage",
          "(3 to 5)% Chance of Crushing Blow",
          "+5 to all Attributes",
-         "+7 to Life",
-         "-7% Magic Find"
+         "+7 to Life"
       ]
    },
    {
@@ -3239,7 +3258,7 @@
          "+(220 to 250) to Maximum Damage",
          "+(180 to 200)% Enhanced Damage",
          "+75 to Dexterity",
-         "Maximum Block Chance +25%"
+          "Maximum Block Chance +10%"
       ]
    },
    {
@@ -4760,6 +4779,32 @@
    },
    {
       "name":[
+      "Maenad",
+      "'ShaenLozYst'"
+    ],
+    "level": "115",
+    "image": "https://docs.median-xl.com/images/runes/xisShael.jpg",
+    "runes": [
+      "Shaen",
+      "Loz",
+      "Yst"
+    ],
+    "items": [
+      "Amazon Helms"
+    ],
+    "stats": [
+      "+(3 to 4) to All Skills",
+      "(40 to 45)% Cast Speed",
+      "(25 to 30)% Movement Speed",
+      "20% Block Speed",
+      "Adds 20-30 Damage",
+      "+1 to ",
+      "Maximum Elemental Resists +1%",
+      "10% Magic Find"
+    ]
+  },
+  {
+    "name": [
          "Corona Aureola",
          "'VezArc'"
       ],
