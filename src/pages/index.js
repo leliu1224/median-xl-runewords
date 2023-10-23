@@ -187,7 +187,12 @@ const IndexPage = props => {
 
   const getStats = (statList, type) => {
     const listItems = statList.map((statLine, i) => {
-      if (statLine != "") return <li key={`${type}-${i}`}>{statLine}</li>;
+      if (statLine != "")
+        return (
+          <li key={`${type}-${i}`}>
+            {type == "rune" ? statLine.replace(" Rune", "") : statLine}
+          </li>
+        );
     });
     return <ul>{listItems}</ul>;
   };
@@ -277,7 +282,7 @@ const IndexPage = props => {
                   {getStats(runeword.node.runes, "rune")}
                 </div>
                 <div className="runeword-items">
-                  {getStats(runeword.node.items, "item")}
+                  {getStats(runeword.node.item, "items")}
                 </div>
                 <div className="runeword-level">
                   <p>Required Level {runeword.node.level}</p>{" "}
@@ -307,7 +312,7 @@ export const query = graphql`
         node {
           name
           level
-          items
+          item
           stats
           runes
         }
