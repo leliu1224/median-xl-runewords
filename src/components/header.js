@@ -5,7 +5,7 @@ const Header = ({ siteTitle }) => (
   <header>
     <div>
       <h1>{siteTitle}</h1>
-      <small>Up to date with version 2.6</small>
+      <small>Up to date with version 2.8</small>
     </div>
   </header>
 );
